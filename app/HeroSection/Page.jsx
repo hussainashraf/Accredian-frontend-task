@@ -16,7 +16,7 @@ export const HeroSection = () => {
     const referralData = Object.fromEntries(formData);
 
     try {
-      const response = await axios.post('http://localhost:4000/api/referrals', referralData);
+      const response = await axios.post('https://accredian-backend-task-iomq.onrender.com/api/referrals', referralData);
       console.log('Referral submitted:', response.data);
       toast.success("Referral Form Submitted Successfully")
       setIsModalOpen(false);
